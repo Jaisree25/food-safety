@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <title>Glove Detection</title>
+  <style>
+    body {
+      background: url("{{ url_for('static', filename='main_background.jpeg') }}") no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .upload-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    input[type="file"] {
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="upload-container">
+    <h1>Upload an Image for Glove Detection</h1>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="image" required><br>
+      <input type="submit" value="Detect">
+    </form>
+  </div>
+</body>
+</html>
+
+
